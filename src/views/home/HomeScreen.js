@@ -8,7 +8,8 @@ const HomeScreen = () => {
     <div>
       <Header />
       <Carousel />
-      <h2>Home Screen</h2>
+      <Carousel />
+      <Carousel />
       <Footer />
     </div>
   )

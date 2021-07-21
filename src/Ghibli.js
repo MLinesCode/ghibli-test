@@ -1,10 +1,10 @@
 import React from 'react';
-import HomeScreen from './views/home/HomeScreen';
+import AppRouter from './routers/AppRouter';
 
 const GhibliApp = () => {
   return (
     <>
-      <HomeScreen />
+      <AppRouter />
     </>
   )
 }
