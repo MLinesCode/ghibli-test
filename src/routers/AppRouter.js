@@ -4,6 +4,7 @@ import {
   Switch,
   Route
 } from 'react-router-dom'
+import LoginScreen from '../views/login/LoginScreen'
 import DashBoardRoutes from './DashBoardRoutes'
 
 const AppRouter = () => {
@@ -11,6 +12,7 @@ const AppRouter = () => {
     <Router>
       <div>
         <Switch>
+          <Route exact path='/login' component={ LoginScreen } />
           <Route path='/' component={ DashBoardRoutes } />
         </Switch>
       </div>
