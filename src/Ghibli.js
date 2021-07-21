@@ -1,9 +1,10 @@
 import React from 'react';
+import HomeScreen from './views/home/HomeScreen';
 
 const GhibliApp = () => {
   return (
     <>
-      <h1>Comienzo de la prueba</h1>
+      <HomeScreen />
     </>
   )
 }
