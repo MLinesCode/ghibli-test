@@ -1,5 +1,5 @@
 import React from 'react'
-import MovieInfo from '../../components/movieinfo/MovieInfo'
+import Carousel from '../../components/carousel/Carousel'
 import Footer from '../../layout/Footer'
 import Header from '../../layout/Header'
 
@@ -7,7 +7,7 @@ const HomeScreen = () => {
   return (
     <div>
       <Header />
-      <MovieInfo />
+      <Carousel />
       <h2>Home Screen</h2>
       <Footer />
     </div>

@@ -1,0 +1,14 @@
+.carousel__container {
+  margin: .4rem .6rem;
+}
+
+.carousel__category {
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+.carousel__items {
+  display: flex;
+}
