@@ -1,0 +1,5 @@
+.home__container {
+  padding-top: 5.5rem;
+  position: relative;;
+  min-height: calc(100vh - 70px);
+}

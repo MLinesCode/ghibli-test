@@ -9,7 +9,6 @@ const Carousel = () => {
       <div className="carousel__items">
         <MovieInfo />
         <MovieInfo />
-        <MovieInfo />
       </div>
     </div>
   )

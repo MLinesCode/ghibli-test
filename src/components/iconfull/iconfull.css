@@ -1,0 +1,17 @@
+.icon__container {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+.icon__img {
+  height: 30px;
+  width: 30px;
+}
+
+.icon__container p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #645F5F;
+  justify-content: space-around;
+}
