@@ -1,0 +1,12 @@
+.footer__container {
+  position: relative;
+  color: #645F5F;
+  background: transparent;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  height: 60px;
+  display: grid;
+  align-items: center;
+  text-align: center; 
+}
