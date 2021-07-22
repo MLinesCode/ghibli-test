@@ -1,0 +1,28 @@
+.header__container {
+  height: 90px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  background-color: hsla(60, 100%, 98%, 1);
+  top: 0;
+  z-index: 2;
+}
+
+.header__icons {
+  display: flex;
+  margin-left: -10%;
+}
+
+.header__logo {
+  height: 44px;
+  width: 127px;
+  overflow: hidden;
+}
+
+.header__logo img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
