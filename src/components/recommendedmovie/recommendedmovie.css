@@ -1,0 +1,44 @@
+.recommended__container {
+  height: 380px;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 1.6rem;
+  z-index: 1;
+}
+
+.recommended__figure {
+  height: inherit;
+  width: inherit;
+}
+
+.recommended__figure img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.recommended__title {
+  position: absolute;
+  display: grid;
+  justify-content: left;
+  align-items: center;
+  height: 125px;
+  width: 100%;
+  padding: 0px;
+  top: 21.5rem;
+  left: 0;
+  background: linear-gradient(
+    0deg,
+    #313131 0%,
+    #4b4b4ba6 40%,
+    #0000ff00 80%,
+    transparent 100%
+  );
+}
+
+.recommended__description {
+  font-size: 1.3rem;
+  margin-top: 60px;
+  padding: 0px 14px;
+  color: white;
+}
