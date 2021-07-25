@@ -44,10 +44,10 @@
 
 .login__section {
   position: relative;
-  width: 35px;
+  width: 20px;
   display: flex;
-  left: 48%;
-  padding: 0px 6px;
+  left: 50%;
+  padding: 0px 4px;
   background-color: hsla(60, 100%, 98%, 1);
   top: .6rem;
 }

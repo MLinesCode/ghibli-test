@@ -42,7 +42,7 @@ const LoginScreen = ({ history }) => {
             <a href="/singup">Registrate</a>
           </div>
         </div>
-        <p className="login__section">OR</p>
+        <p className="login__section">O</p>
         <hr />
         <div className="login__social">
           <SocialLogin 
