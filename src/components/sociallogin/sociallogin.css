@@ -1,0 +1,22 @@
+.social__container {
+  display: flex;
+  justify-content: center;
+}
+
+.social__button {
+  height: 50px;
+  width: 306px;
+  display: flex;
+  padding: 13px 25px 13px 8px;
+  border-radius: 2px;
+  align-items: center;
+  color: black;
+  background: #ffffff;
+  border: 1px solid hsla(214, 13%, 79%, 1)
+}
+
+.social__icon {
+  height: 34px;
+  width: 34px;
+  margin: 0 15px;
+}

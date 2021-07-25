@@ -1,0 +1,53 @@
+.login__container {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  margin: 2vh auto;
+}
+
+.login__image {
+  height: 15vh;
+  width: 250px;
+  margin: auto;
+}
+.login__image img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.login__input {
+  height: 56px;
+  width: 306px;
+  margin: auto;
+  margin-top: 22vh;
+}
+
+.login__redirect {
+  display: flex;
+  justify-content: left;
+  margin-top: 1.2rem;
+}
+.login__redirect p {
+  font-size: 1.1rem;
+  margin-right: .5rem;
+}
+.login__redirect a {
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: hsla(198, 73%, 41%, 1);
+}
+
+.login__social {
+  margin-top: 3vh;
+}
+
+.login__section {
+  position: relative;
+  width: 35px;
+  display: flex;
+  left: 48%;
+  padding: 0px 6px;
+  background-color: hsla(60, 100%, 98%, 1);
+  top: .6rem;
+}

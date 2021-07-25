@@ -1,14 +1,15 @@
 .movie__container {
   margin: .6rem .2rem;
   width: 10rem;
-  padding: 12px;
+  padding: 12px 9px;
 }
 
 .movie__figure {
   margin: auto;
-  width: 7rem;
-  height: 9rem;
-  border-radius: 5px;
+  width: 6.5rem;
+  height: 8.8rem;
+  border-radius: 10px;
+  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.2);
 }
 
 .movie__image {

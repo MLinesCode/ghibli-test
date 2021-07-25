@@ -2,7 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import IconLite from '../components/iconlite/IconLite'
 import IconClock from '../assets/icons/clock.png'
-import IconAvatar from '../assets/icons/avatar.png'
+import IconAvatar from '../assets/icons/avatar.svg'
 import LogoGhibli from '../assets/logo-ghibli.png'
 import './header.css'
 
