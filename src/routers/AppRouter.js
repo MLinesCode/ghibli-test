@@ -5,6 +5,7 @@ import {
   Route
 } from 'react-router-dom'
 import LoginScreen from '../views/login/LoginScreen'
+import SingUpScreen from '../views/singup/SingUpScreen'
 import DashBoardRoutes from './DashBoardRoutes'
 
 const AppRouter = () => {
@@ -13,6 +14,7 @@ const AppRouter = () => {
       <div>
         <Switch>
           <Route exact path='/login' component={ LoginScreen } />
+          <Route exact path="/singup" component={ SingUpScreen } />
           <Route path='/' component={ DashBoardRoutes } />
         </Switch>
       </div>

@@ -11,4 +11,12 @@
 
 .carousel__items {
   display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+
+.carousel__items::-webkit-scrollbar {
+  -ms-overflow-style: none;
+  -moz-scrollbars: none;
+  scrollbar-width: none;
 }

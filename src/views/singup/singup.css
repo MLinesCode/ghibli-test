@@ -1,0 +1,60 @@
+.singup__container {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  margin: 2vh auto;
+}
+
+.singup__image {
+  height: 15vh;
+  width: 250px;
+  margin: auto;
+  margin-bottom: 12vh;
+}
+.singup__image img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+.singup__image h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  text-align: left;
+  margin: auto;
+  margin-top: 2vh;
+}
+
+.singup__input {
+  height: 56px;
+  width: 306px;
+  margin: auto;
+  margin-top: 3vh;
+}
+
+.singup__validation {
+  height: 8rem;
+  margin-top: 1.4rem;
+  background-color: white;
+  border-radius: 4px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.singup__button {
+  width: 100%;
+  margin-top: 5.4rem;
+}
+
+.singup__redirect {
+  display: flex;
+  justify-content: left;
+  margin-top: 1rem;
+}
+.singup__redirect p {
+  font-size: 1.1rem;
+  margin-right: .5rem;
+}
+.singup__redirect a {
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: hsla(198, 73%, 41%, 1);
+}

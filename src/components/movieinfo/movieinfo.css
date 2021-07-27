@@ -9,7 +9,12 @@
   width: 6.5rem;
   height: 8.8rem;
   border-radius: 10px;
+  transition: transform 450ms;
   box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.2);
+}
+.movie__figure:hover {
+  transform: scale(1.08);
+  opacity: 1;
 }
 
 .movie__image {
