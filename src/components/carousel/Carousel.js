@@ -1,5 +1,5 @@
 import React from 'react'
-import MovieInfo from '../movieinfo/MovieInfo'
+import MoviePoster from '../movieinfo/MoviePoster'
 import './carousel.css'
 
 const Carousel = () => {
@@ -7,13 +7,12 @@ const Carousel = () => {
     <div className="carousel__container">
       <h3 className="carousel__category">Categorias</h3>
       <div className="carousel__items">
-        <MovieInfo />
-        <MovieInfo />
-        <MovieInfo />
-        <MovieInfo />
-        <MovieInfo />
-        <MovieInfo />
-        <MovieInfo />
+        <MoviePoster />
+        <MoviePoster />
+        <MoviePoster />
+        <MoviePoster />
+        <MoviePoster />
+        <MoviePoster />
       </div>
     </div>
   )

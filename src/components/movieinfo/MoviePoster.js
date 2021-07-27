@@ -1,7 +1,7 @@
 import React from 'react';
-import './movieinfo.css';
+import './movieposter.css';
 
-const MovieInfo = () => {
+const MoviePoster = () => {
   return (
     <div className="movie__container">
       <figure className="movie__figure">
@@ -12,4 +12,4 @@ const MovieInfo = () => {
   )
 }
 
-export default MovieInfo
+export default MoviePoster
