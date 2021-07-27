@@ -1,6 +1,23 @@
+.favorites__nav {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.favorites__title {
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-left: 1rem;
+  margin-top: .8rem;
+  margin-bottom: 2rem;
+  color: #575252;
+}
+
 .favorites__items {
-  width: 95%;
+  width: 96%;
   margin: auto;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
 }

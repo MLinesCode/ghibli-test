@@ -19,7 +19,7 @@
 
 .recommended__title {
   position: absolute;
-  display: grid;
+  display: flex;
   justify-content: left;
   align-items: center;
   height: 125px;
@@ -34,6 +34,13 @@
     #50505000 80%,
     transparent 100%
   );
+}
+
+.recommended__play {
+  height: 32px;
+  width: 60px;
+  margin-left: 10px;
+  margin-top: 3.8rem;
 }
 
 .recommended__description {

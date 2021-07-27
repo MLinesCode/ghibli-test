@@ -10,7 +10,7 @@ import './home.css'
 const HomeScreen = () => {
   return (
     <div className="home__container">
-      <Header />
+      <Header redirectTo={ '/login' } />
       <RecommendedMovie movieCover={ CoverImage } alt={ CoverImage } movieTitle="El castillo del vagabundo" />
       <Carousel />
       <Carousel />

@@ -1,0 +1,36 @@
+.banner__main {
+  margin-bottom: 6vh;
+}
+
+.banner__container {
+  height: 109px;
+  width: 335px;
+  overflow: hidden;
+  margin: 20px 15xp;
+  border-radius: 8px;
+  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.2);
+}
+
+.banner__image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.banner__button {
+  height: 109px;
+  width: 58px;
+  display: flex;
+  margin-top: 0rem;
+  left: 18.1rem;
+  justify-content: right;
+  position: absolute;
+}
+
+.banner__text p {
+  position: absolute;
+  margin-top: 0rem;
+  top: 34%;
+  right: 0;
+  color: white;
+}

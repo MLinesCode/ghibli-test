@@ -38,8 +38,9 @@ const SingUpScreen = ({ history }) => {
             <PrimaryButton
                 className={"singup__button"}
                 onClick={ handleSingup }
-                buttonText={ "Continuar" }
-            />
+            >
+              <p>Continuar</p>
+            </PrimaryButton>
           </div>
           <div className="singup__redirect">
             <p>Ya tienes una cuenta?</p>

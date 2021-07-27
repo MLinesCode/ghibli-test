@@ -1,13 +1,13 @@
 import React from 'react'
 import './primarybutton.css'
 
-const PrimaryButton = ({ onClick, buttonText, className }) => {
+const PrimaryButton = ({ onClick, children, className }) => {
   return (
     <button
         className={ className }
         onClick={ onClick }
     >
-      { buttonText }
+      { children }
     </button>
   )
 }

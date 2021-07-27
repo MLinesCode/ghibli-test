@@ -35,8 +35,9 @@ const LoginScreen = ({ history }) => {
           <PrimaryButton 
               className={"login__button"}
               onClick={ handleLogin }
-              buttonText={ "Iniciar Sesion" }
-          />
+          >
+            <p>Iniciar Sesión</p>
+          </PrimaryButton>
           <div className="login__redirect">
             <p>Aun sin cuenta?</p>
             <a href="/singup">Registrate</a>

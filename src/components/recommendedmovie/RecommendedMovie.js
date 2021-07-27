@@ -1,4 +1,5 @@
 import React from 'react'
+import PrimaryButton from '../primarybutton/PrimaryButton'
 import './recommendedmovie.css'
 
 const RecommendedMovie = ({ movieCover, movieTitle }) => {
@@ -9,6 +10,11 @@ const RecommendedMovie = ({ movieCover, movieTitle }) => {
       </figure>
       <div className="recommended__title">
         <h3 className="recommended__description">{ movieTitle }</h3>
+          <PrimaryButton
+              className={ "recommended__play" }
+          >
+            <p>Ver</p>
+          </PrimaryButton>
       </div>
     </div>
   )
