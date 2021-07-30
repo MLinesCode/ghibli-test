@@ -8,7 +8,7 @@ import AvatarIcon from '../../assets/icons/avatar.svg'
 import LogoGhibli from '../../assets/logo.png'
 import './movieinfo.css'
 
-const MovieInfo = () => {
+const MovieInfo = ({ title, description }) => {
   return (
     <div className="movie__main">
       <div className="movie__nav">
@@ -22,8 +22,8 @@ const MovieInfo = () => {
         <img src={ "https://pics.filmaffinity.com/La_princesa_Mononoke-720005363-large.jpg" } alt="poster de la pelicula" />
       </figure>
       <div className="movie__details">
-        <h3>La princesa Monoke</h3>
-        <p>"The orphan Sheeta inherited a mysterious crystal that links her to the mythical sky-kingdom of Laputa. With the help of resourceful Pazu and a rollicking band of sky pirates, she makes her way to the ruins of the once-great civilization. Sheeta and Pazu must outwit the evil Muska, who plans to use Laputa's science to make himself ruler of the world."</p>
+        <h3>{ title }</h3>
+        <p>{ description }</p>
         <div className="movie__button">
           <PrimaryButton
             className="movie__play"
