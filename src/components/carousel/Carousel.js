@@ -1,18 +1,26 @@
-import React from 'react'
-import MoviePoster from '../movieinfo/MoviePoster'
+import React, { useState, useEffect } from 'react'
+import MoviePoster from '../movieposter/MoviePoster'
 import './carousel.css'
 
-const Carousel = () => {
+const Carousel = ({ category }) => {
+
+  const [ film, setFilm ] = useState([]);
+  useEffect(() => {
+    fetch('https://ghibliapi.herokuapp.com/films')
+      .then((res) => res.json())
+      .then((film) => setFilm(film))
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+
   return (
     <div className="carousel__container">
-      <h3 className="carousel__category">Categorias</h3>
+      <h3 className="carousel__category">{ category }</h3>
       <div className="carousel__items">
-        <MoviePoster />
-        <MoviePoster />
-        <MoviePoster />
-        <MoviePoster />
-        <MoviePoster />
-        <MoviePoster />
+        {film.map(item =>
+          <MoviePoster key={item.id} {...item} />
+        )}
       </div>
     </div>
   )

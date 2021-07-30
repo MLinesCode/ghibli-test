@@ -12,9 +12,9 @@ const HomeScreen = () => {
     <div className="home__container">
       <Header redirectTo={ '/login' } />
       <RecommendedMovie movieCover={ CoverImage } alt={ CoverImage } movieTitle="El castillo del vagabundo" />
-      <Carousel />
-      <Carousel />
-      <Carousel />
+      <Carousel category="Mi lista" />
+      <Carousel category="Lo mas visto" />
+      <Carousel category="Ganadoras del Oscar" />
       <Menu />
       <Footer />
     </div>
