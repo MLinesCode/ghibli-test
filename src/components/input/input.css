@@ -1,7 +1,7 @@
 .input {
   height: 100%;
   width: 100%;
-  padding: 6%;
+  padding: 22px;
   border-radius: 4px;
   border: none;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));

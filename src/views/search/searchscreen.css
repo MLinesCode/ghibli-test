@@ -1,0 +1,35 @@
+.search__text {
+  width: 100%;
+  color: #645F5F;
+  position: absolute;
+  top: 40vh;
+  right: auto;
+  left: auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+.search__text h4 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 14px;
+}
+.search__text p {
+  font-size: 1.1rem;
+  font-weight: 300
+}
+
+.search__image {
+  height: 222px;
+  width: 222px;
+  overflow: hidden;
+  position: absolute;
+  left: 22%;
+  top: 74vh;
+}
+
+.search__image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}

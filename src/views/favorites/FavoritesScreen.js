@@ -23,6 +23,12 @@ const FavoritesScreen = () => {
         <BannerMovie />
         <BannerMovie />
         <BannerMovie />
+        <BannerMovie />
+        <BannerMovie />
+        <BannerMovie />
+        <BannerMovie />
+        <BannerMovie />
+        <BannerMovie />
         <Menu />
       </div>
     </>

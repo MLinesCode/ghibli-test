@@ -15,8 +15,9 @@
 }
 
 .favorites__items {
-  width: 96%;
+  width: 95%;
   margin: auto;
+  margin-left: 12px; 
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
