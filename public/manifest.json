@@ -1,6 +1,6 @@
 {
   "short_name": "Ghibli",
-  "name": "Peliculas de estudio Ghibli",
+  "name": "Ghibli Films",
   "icons": [
     {
       "src": "ghibli-appleIcon.png",
@@ -18,8 +18,10 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": "./home",
+  "start_url": "/",
+  "lang": "es",
   "display": "standalone",
-  "theme_color": "#FFFFF5",
+  "orientation": "portrait",
+  "theme_color": "#e3660f",
   "background_color": "#ffffff"
 }

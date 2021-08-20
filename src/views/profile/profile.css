@@ -1,0 +1,79 @@
+hr {
+  border: 1px solid;
+  color: #EC6708;
+}
+
+.profile__info {
+  margin-left: 20px;
+}
+
+.profile__info h2 {
+  font-size: 1.4rem;
+  padding: 1.6rem 0;
+}
+
+.profile__info img {
+  height: 66px;
+  width: 66px;
+}
+
+.profile__info h4 {
+  font-size: 1.3rem;
+  color: #645F5F;
+  padding: 1rem 0;
+}
+
+.profile__settings {
+  color: #EC6708;
+}
+
+.profile__settings h3 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  padding: 6px 20px;
+}
+
+.profile__settings p {
+  font-weight: 600;
+  padding: 10px 20px;
+}
+
+.profile__arrow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 15px;
+}
+
+label {
+  height: 20px;
+  width: 20px;
+  background-repeat: no-repeat;
+  background-image: url('../../assets/icons/arrow-right.png');
+}
+
+.profile__security {
+  margin-top: 10px;
+  margin-bottom: 2px;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.profile__settings p {
+  font-size: 1rem;
+}
+
+.profile__social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile__legal {
+  color: #EC6708;
+  text-align: center;
+}
+
+.profile__legal p {
+  padding: .3rem;
+}

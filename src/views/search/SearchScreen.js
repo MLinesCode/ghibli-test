@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import IconLite from '../../components/iconlite/IconLite'
 import ArrowLeft from '../../assets/icons/left-arrow.svg'
 import LogoGhibli from '../../assets/logo.png'
-import AvatarIcon from '../../assets/icons/avatar.svg'
+import AvatarUser from '../../assets/avatar.png'
 import Totoro from '../../assets/totoro.png'
 import InputSuggest from '../../components/inputsuggest/InputSuggest'
 import { getApiSuggestions } from '../../hooks/request'
@@ -36,7 +36,7 @@ const SearchScreen = () => {
         </a>
         <img src={ LogoGhibli } alt={ LogoGhibli } />
         <a href="/login">
-          <IconLite iconSource={ AvatarIcon } />
+          <IconLite iconSource={ AvatarUser } />
         </a>
       </div>
       <InputSuggest 
