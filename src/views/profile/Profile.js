@@ -3,6 +3,7 @@ import IconLite from '../../components/iconlite/IconLite'
 import ArrowLeft from '../../assets/icons/left-arrow.svg'
 import LogoGhibli from '../../assets/logo.png'
 import AvatarUser from '../../assets/avatar.png'
+import AvatarFlag from '../../assets/japan.png'
 import SocialTiktok from '../../assets/icons/tik-tok.svg'
 import SocialTwitter from '../../assets/icons/twitter.svg'
 import SocialInstagram from '../../assets/icons/instagram.svg'
@@ -20,7 +21,8 @@ const Profile = () => {
         </div>
         <section className="profile__info">
           <h2>Mi cuenta</h2>
-          <img src={ AvatarUser } alt="avatar del usuario" />
+          <img className="profile__avatar" src={ AvatarUser } alt="avatar del usuario" />
+          <img className="profile__flag" src={ AvatarFlag } alt="pais del usuario" />
           <h4>Akira Chinami</h4>
         </section>
         <section className="profile__settings">
