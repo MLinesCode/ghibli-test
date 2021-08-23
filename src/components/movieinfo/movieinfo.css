@@ -7,6 +7,7 @@
 
 .movie__nav img {
   height: 44px;
+  object-fit: contain;
 }
 
 .movie__poster {
@@ -74,7 +75,7 @@
 
 .gallery__poster {
   height: 17vh;
-  width: 100%;
+  width: 99%;
   margin-bottom: .8rem;
   border-radius: 8px;
   overflow: hidden;
@@ -88,8 +89,8 @@
 }
 
 .gallery__item {
-  height: 120px;
-  width: 162px;
+  height: 125px;
+  width: 48%;
   margin: auto;
   margin-bottom: 12px;
   border-radius: 8px;

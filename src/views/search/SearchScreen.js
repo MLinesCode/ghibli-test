@@ -29,7 +29,7 @@ const SearchScreen = () => {
   };
 
   return (
-    <div>
+    <>
       <div className="movie__nav">
         <a href="/home">
           <IconLite iconSource={ ArrowLeft } />
@@ -54,7 +54,7 @@ const SearchScreen = () => {
       <div className="search__image">
         <img src={ Totoro } loading="lazy" alt={ Totoro } />
       </div>
-    </div>
+    </>
   )
 }
 
