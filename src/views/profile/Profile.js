@@ -8,6 +8,7 @@ import SocialTiktok from '../../assets/icons/tik-tok.svg'
 import SocialTwitter from '../../assets/icons/twitter.svg'
 import SocialInstagram from '../../assets/icons/instagram.svg'
 import './profile.css'
+import { Link } from 'react-router-dom'
 
 const Profile = () => {
   return (
@@ -51,7 +52,11 @@ const Profile = () => {
             <label />
            </div>
            <hr/>
-           <p>Salir</p>
+           <Link 
+            to="/login"
+           >
+            <p>Salir</p>
+           </Link>
         </section>
         <section>
           <div className="profile__social">
