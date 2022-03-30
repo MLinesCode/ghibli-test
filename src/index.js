@@ -1,14 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import GhibliApp from './Ghibli';
-import './index.css';
-import reportWebVitals from './reportWebVitals';
+import * as ReactDOMClient from "react-dom/client";
+import GhibliApp from "./Ghibli";
+import "./index.css";
+import reportWebVitals from "./reportWebVitals";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <GhibliApp />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+const container = document.getElementById("root");
+
+const root = ReactDOMClient.createRoot(container);
+
+root.render(<GhibliApp />);
 
 reportWebVitals();
