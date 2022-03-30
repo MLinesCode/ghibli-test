@@ -22,15 +22,15 @@
   display: flex;
   justify-content: left;
   align-items: center;
-  height: 125px;
+  height: 128px;
   width: 100%;
-  padding: 0px;
+  padding: 5px;
   top: 21.5rem;
   left: 0;
   background: linear-gradient(
     0deg,
-    #313131 0%,
-    #1f1f1fa6 40%,
+    #222222 10%,
+    #1f1f1fa6 55%,
     #50505000 80%,
     transparent 100%
   );
@@ -42,10 +42,20 @@
   margin-left: 10px;
   margin-top: 3.8rem;
 }
+.recommended__play > p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  filter: drop-shadow(1px 1px 1px #313131);
+}
 
 .recommended__description {
+  height: 1.6rem;
+  width: 76%;
   font-size: 1.3rem;
   margin-top: 60px;
   padding: 0px 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
   color: white;
 }
