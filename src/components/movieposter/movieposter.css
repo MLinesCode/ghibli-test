@@ -1,7 +1,7 @@
 .movie__container {
-  margin: .6rem .2rem;
+  margin: 1.2rem 0.4rem;
   width: 10rem;
-  padding: 0px 5px;
+  padding: 0px 8px;
 }
 
 .movie__figure {
