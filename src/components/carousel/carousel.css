@@ -1,5 +1,5 @@
 .carousel__container {
-  margin: .4rem .6rem;
+  margin: 0.4rem 0.6rem;
 }
 
 .carousel__category {
@@ -19,4 +19,5 @@
   -ms-overflow-style: none;
   -moz-scrollbars: none;
   scrollbar-width: none;
+  display: none;
 }
