@@ -12,31 +12,31 @@ const LoginScreen = ({ history }) => {
   const handleLogin = () => {
     history.replace('/')
   }
-  
+
   return (
     <section className="login__main">
       <article className="login__view">
         <div className="login__container">
           <div className="login__image">
-            <img src={ LoginGhibli }
-                loading="lazy"
-                alt={ LoginGhibli }
+            <img src={LoginGhibli}
+              loading="lazy"
+              alt={LoginGhibli}
             />
-            <img src={ LoginImage }
-                 loading="lazy"
-                 alt={ LoginImage } />
+            <img src={LoginImage}
+              loading="lazy"
+              alt={LoginImage} />
           </div>
           <div className="login__input">
-            <Input 
-                type={ 'text' }
-                placeholder={ 'Correo electronico' }
+            <Input
+              type={'text'}
+              placeholder={'Correo electronico'}
             />
           </div>
-          <PrimaryButton 
-              className={"login__button"}
-              onClick={ handleLogin }
+          <PrimaryButton
+            className={"login__button"}
+            onClick={handleLogin}
           >
-            <p>Iniciar Sesión</p>
+            <p>Iniciar sesión</p>
           </PrimaryButton>
           <div className="login__redirect">
             <p>Aun sin cuenta?</p>
@@ -46,13 +46,13 @@ const LoginScreen = ({ history }) => {
         <p className="login__section">O</p>
         <hr />
         <div className="login__social">
-          <SocialLogin 
-              socialName="Facebook"
-              socialIcon={ LoginFacebook }
+          <SocialLogin
+            socialName="Facebook"
+            socialIcon={LoginFacebook}
           />
-          <SocialLogin 
-              socialName="Google"
-              socialIcon={ LoginGoogle }    
+          <SocialLogin
+            socialName="Google"
+            socialIcon={LoginGoogle}
           />
         </div>
       </article>

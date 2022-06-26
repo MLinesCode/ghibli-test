@@ -46,9 +46,8 @@
 .login__section {
   position: relative;
   width: 20px;
-  display: flex;
-  left: 50%;
+  margin: auto;
+  top: 1.1rem;
   padding: 0px 4px;
   background-color: hsla(60, 100%, 98%, 1);
-  top: .6rem;
 }
