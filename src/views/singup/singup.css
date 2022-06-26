@@ -19,16 +19,22 @@
 .singup__image h2 {
   font-size: 2rem;
   font-weight: 400;
-  text-align: left;
-  margin: auto;
+  text-align: center;
   margin-top: 2vh;
 }
 
 .singup__input {
-  height: 56px;
   width: 306px;
   margin: auto;
-  margin-top: 3vh;
+}
+
+.singup__input h3 {
+  margin: 1rem 0;
+  padding-top: 1rem;
+}
+
+.singup__text {
+  margin: .8rem 0;
 }
 
 .singup__validation {
@@ -41,7 +47,7 @@
 
 .singup__button {
   width: 100%;
-  margin-top: 5.4rem;
+  margin-top: 2.4rem;
 }
 
 .singup__redirect {
