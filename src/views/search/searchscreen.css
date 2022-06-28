@@ -1,5 +1,10 @@
+.movie__nav {
+  box-shadow: 1px 1px 12px 2px rgba(0, 0, 0, 0.2);
+}
+
 .search__text {
   width: 100%;
+  margin-top: -6vh;
   color: #645F5F;
   position: absolute;
   top: 40vh;
@@ -10,22 +15,22 @@
 }
 
 .search__text h4 {
-  font-size: 1.6rem;
-  font-weight: 500;
+  font-size: 1.8rem;
+  font-weight: 600;
   margin-bottom: 14px;
 }
 .search__text p {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 300
 }
 
 .search__image {
-  height: 222px;
-  width: 222px;
+  height: 240px;
+  width: 240px;
   overflow: hidden;
   position: absolute;
   left: 22%;
-  top: 74vh;
+  bottom: 0;
 }
 
 .search__image img {
