@@ -1,0 +1,49 @@
+.container {
+  margin: 0.4rem 0.6rem;
+  overflow: hidden;
+}
+
+.filmsContainer {
+  height: 25vh;
+  margin: 1.2rem 0 3rem 0;
+}
+
+.category {
+  margin: .6rem 0;
+  height: 1.6rem;
+  width: 8.6rem;
+  background: var(--skeleton-color);
+  animation: animation var(--skeleton-animation);
+}
+
+.filmContainer {
+  display: flex;
+}
+
+.film {
+  margin: 1rem .6rem;
+  padding: 0 .8rem;
+  height: 10rem;
+  width: 8rem;
+  border-radius: 5px;
+  background: var(--skeleton-color);
+  animation: animation var(--skeleton-animation);
+}
+
+.title {
+  height: 1.5rem;
+  width: 6.5rem;
+  margin: auto;
+  background: var(--skeleton-color);
+  animation: animation var(--skeleton-animation);
+}
+
+@keyframes animation {
+  0% {
+    background-position: -100px;
+  }
+  40%,
+  100% {
+    background-position: 270px;
+  }
+}

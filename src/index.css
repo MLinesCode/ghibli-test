@@ -1,3 +1,7 @@
+:root {
+  --skeleton-animation: 1.4s infinite;
+  --skeleton-color: linear-gradient(90deg, #e8e8e8 0px, #f8f8f8 40px, #e8e8e8 80px);
+}
 * {
   margin: 0;
   padding: 0;
