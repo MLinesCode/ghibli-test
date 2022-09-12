@@ -1,8 +1,7 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import './movieposter.css';
 
-const MoviePoster = ({ title, image, id }) => {
+const MoviePoster = ({ title, image }) => {
   return (
     <div className="movie__container">
       <Link
