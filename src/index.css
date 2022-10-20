@@ -1,6 +1,7 @@
 :root {
   --skeleton-animation: 1.4s infinite;
   --skeleton-color: linear-gradient(90deg, #e8e8e8 0px, #f8f8f8 40px, #e8e8e8 80px);
+  --title-font: 'Merriweather Sans', sans-serif;
 }
 * {
   margin: 0;
@@ -10,5 +11,5 @@
 
 body {
   background-color: hsla(60, 100%, 98%, 1);
-  font-family: 'Merriweather Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
