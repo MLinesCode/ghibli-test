@@ -112,7 +112,7 @@ input[type="checkbox"]:checked::before {
 .redirect {
   display: flex;
   justify-content: left;
-  margin-top: 1rem;
+  margin: 1rem 0 2.5rem 0;
 }
 .redirect p {
   font-size: 1.1rem;
