@@ -2,7 +2,7 @@ import React from 'react'
 import LoginGhibli from '../../assets/logo-ghibli.png'
 import Input from '../../components/input/Input'
 import PrimaryButton from '../../components/primarybutton/PrimaryButton'
-import './singup.css'
+import styles from './singup.module.css'
 
 const SingUpScreen = ({ history }) => {
   const handleSingup = () => {
@@ -10,18 +10,24 @@ const SingUpScreen = ({ history }) => {
   }
 
   return (
-    <section className="singup__main">
-      <article className="singup__view">
-        <div className="singup__container">
-          <div className="singup__image">
+    <section className={styles.main}>
+      <article className={styles.view}>
+        <div className={styles.container}>
+          <div className={styles.image}>
             <img src={LoginGhibli}
               loading="lazy"
               alt={LoginGhibli} />
             <h2>Crea tu cuenta</h2>
           </div>
-          <section className='singup__content'>
-            <div className="singup__input">
-              <h3>Correo electronico</h3>
+          <section className={styles.content}>
+            <div className={styles.text}>
+              <label for="name"></label>
+              <Input
+                size='30'
+                placeholder={'Nombre Apellido'}
+              />
+            </div>
+            <div className={styles.text}>
               <label for="email"></label>
               <Input
                 type='email'
@@ -31,15 +37,14 @@ const SingUpScreen = ({ history }) => {
                 required
               />
             </div>
-            <div className="singup__input">
-              <h3>Crea tu contraseña</h3>
-              <div className='singup__text'>
+            <div className={styles.input}>
+              <div className={styles.text}>
                 <Input
                   type={'password'}
                   placeholder={'Contraseña'}
                 />
               </div>
-              <div className='singup__text'>
+              <div className={styles.text}>
                 <Input
                   type={'password'}
                   placeholder={'Confirma tu contraseña'}
@@ -47,15 +52,25 @@ const SingUpScreen = ({ history }) => {
               </div>
             </div>
           </section>
+          <section>
+            <label className={styles.checkbox}>
+              <input type={"checkbox"} name="checkbox" />
+              Deseo recibir notificaciones semanales
+            </label>
+            <label className={styles.checkbox}>
+              <input type={"checkbox"} name="checkbox" />
+              Acepto terminos y condiciones
+            </label>
+          </section>
           <div>
             <PrimaryButton
-              className={"singup__button"}
+              className={styles.button}
               onClick={handleSingup}
             >
               <p>Continuar</p>
             </PrimaryButton>
           </div>
-          <div className="singup__redirect">
+          <div className={styles.redirect}>
             <p>Ya tienes una cuenta?</p>
             <a href="/login">Inicia sesión</a>
           </div>

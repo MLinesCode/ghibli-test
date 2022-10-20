@@ -1,0 +1,126 @@
+.main {
+  height: 100vh;
+}
+
+.view {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  background-image: url('../../assets/background.png');
+}
+
+.container {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  margin: 2vh auto;
+}
+
+.image {
+  height: 15vh;
+  width: 250px;
+  margin: 5vh auto 8vh;
+}
+.image img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+.image h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-align: left;
+  margin: 1vh 0 0 -4vh;
+  color: #645F5F;
+}
+
+.input {
+  width: 306px;
+  margin: auto;
+}
+
+.input h3 {
+  margin: 1rem 0;
+  padding-top: 1rem;
+}
+
+.text {
+  margin-top: 1.6rem;
+}
+
+.validation {
+  height: 8rem;
+  margin-top: 1.4rem;
+  background-color: white;
+  border-radius: 4px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.checkbox {
+  margin-top: 1.6rem;
+  width: 100%;
+  font-size: .8rem;
+  font-weight: 300;
+  line-height: 1.1;
+  color: #EC6708;
+  display: grid;
+  grid-template-columns: 1em auto;
+  gap: 1em;
+}
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 1.3em;
+  height: 1.3em;
+  border: 0.15em solid currentColor;
+  border-radius: 0.3em;
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
+}
+input[type="checkbox"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--form-control-color);
+  background-color: #EC6708;
+  transform-origin: bottom left;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+input[type="checkbox"]:focus {
+  outline: max(2px, 0.15em) solid currentColor;
+  outline-offset: max(2px, 0.15em);
+}
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+.checkbox + .checkbox {
+  margin-top: 1em;
+}
+
+
+.button {
+  width: 100%;
+}
+
+.redirect {
+  display: flex;
+  justify-content: left;
+  margin-top: 1rem;
+}
+.redirect p {
+  font-size: 1.1rem;
+  margin-right: .5rem;
+  color: #645F5F;
+}
+.redirect a {
+  font-size: 1.1rem;
+  text-decoration: underline;
+  color: #EC6708;
+}
