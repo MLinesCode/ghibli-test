@@ -1,16 +1,15 @@
-import React from 'react'
-import './sociallogin.css'
+import styles from './sociallogin.module.css'
 
 const SocialLogin = ({ socialName, socialIcon }) => {
   return (
-    <div className="social__container">
-      <button className="social__button">
-        <img 
-            className="social__icon" 
-            src={ socialIcon }
-            alt={ socialIcon }
+    <div className={styles.container}>
+      <button className={styles.button}>
+        <img
+          className={styles.icon}
+          src={socialIcon}
+          alt={socialIcon}
         />
-        Continuar con { socialName }
+        Continuar con {socialName}
       </button>
     </div>
   )

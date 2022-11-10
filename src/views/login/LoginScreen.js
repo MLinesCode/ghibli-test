@@ -1,12 +1,11 @@
-import React from 'react'
 import LoginGhibli from '../../assets/logo-ghibli.png'
 import Input from '../../components/input/Input'
 import PrimaryButton from '../../components/primarybutton/PrimaryButton'
 import SocialLogin from '../../components/sociallogin/SocialLogin'
 import LoginFacebook from '../../assets/icons/facebook.svg'
 import LoginGoogle from '../../assets/icons/google.svg'
-import LoginImage from '../../assets/cat.png'
-import './login.css'
+import LoginImage from '../../assets/icon-login.png'
+import styles from './login.module.css'
 
 const LoginScreen = ({ history }) => {
   const handleLogin = () => {
@@ -14,38 +13,44 @@ const LoginScreen = ({ history }) => {
   }
 
   return (
-    <section className="login__main">
-      <article className="login__view">
-        <div className="login__container">
-          <div className="login__image">
+    <section className={styles.main}>
+      <article className={styles.view}>
+        <div className={styles.container}>
+          <div className={styles.image}>
             <img src={LoginGhibli}
               loading="lazy"
               alt={LoginGhibli}
             />
             <img src={LoginImage}
+              className={styles.imglogin}
               loading="lazy"
               alt={LoginImage} />
           </div>
-          <div className="login__input">
+          <div className={styles.input}>
             <Input
               type={'text'}
               placeholder={'Correo electronico'}
             />
+            <Input
+              type={'password'}
+              placeholder={'Contraseña'}
+            />
+            <p>¿Olvidaste tu contraseña?</p>
           </div>
           <PrimaryButton
-            className={"login__button"}
+            className={styles.button}
             onClick={handleLogin}
           >
             <p>Iniciar sesión</p>
           </PrimaryButton>
-          <div className="login__redirect">
+          <div className={styles.redirect}>
             <p>Aun sin cuenta?</p>
             <a href="/singup">Registrate</a>
           </div>
         </div>
-        <p className="login__section">O</p>
-        <hr />
-        <div className="login__social">
+        <p className={styles.section}>OR</p>
+        <div className={styles.line}></div>
+        <div className={styles.social}>
           <SocialLogin
             socialName="Facebook"
             socialIcon={LoginFacebook}

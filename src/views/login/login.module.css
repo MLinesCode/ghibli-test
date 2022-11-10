@@ -1,0 +1,84 @@
+.container {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  margin: 1.4vh auto;
+}
+
+.view {
+  background-image: url('/src/assets/background.png');
+}
+
+.image {
+  height: 16vh;
+  width: 250px;
+  margin: 5vh auto 0;
+}
+.image img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.input {
+  height: 56px;
+  width: 306px;
+  margin: auto;
+  margin-top: 18vh;
+}
+
+.input input {
+  margin-top: 1rem;
+}
+
+.input p {
+  padding: 10px 0;
+  font-weight: 300;
+  font-size: .9rem;
+  color: #EC6708;
+}
+
+.button {
+  margin-top: 9.2rem;
+}
+
+.redirect {
+  display: flex;
+  justify-content: left;
+  margin-top: 1.2rem;
+  font-weight: 300;
+  color: #454545;
+}
+.redirect p {
+  font-size: 1rem;
+  margin-right: .5rem;
+}
+.redirect a {
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: 500;
+  color: #EC6708;
+}
+
+.social {
+  margin-top: 3vh;
+  margin-bottom: 2rem;
+}
+
+.section {
+  position: relative;
+  width: 50px;
+  text-align: center;
+  color: #EC6708;
+  padding: 0 10px;
+  margin: 0 auto;
+  top: 1.8rem;
+  padding: 0px 4px;
+  background-color: hsla(60, 100%, 98%, 1);
+}
+
+.line {
+  height: 2px;
+  margin-top: 1.1rem;
+  background: #EC6708;
+}
