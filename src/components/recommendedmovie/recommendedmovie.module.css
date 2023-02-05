@@ -1,0 +1,63 @@
+.container {
+  height: 340px;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 1.6rem;
+  z-index: 1;
+}
+
+.figure {
+  height: inherit;
+  width: inherit;
+}
+
+.figure img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.title {
+  position: absolute;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  height: 128px;
+  width: 100%;
+  padding: 0 .6rem;
+  top: 18.5rem;
+  left: 0;
+  background: linear-gradient(
+    0deg,
+    #222222 10%,
+    #1f1f1fa6 55%,
+    #50505000 80%,
+    transparent 100%
+  );
+}
+
+.play {
+  height: 35px;
+  padding: 0 .5rem;
+  width: 105px;
+  margin: 0 10px;
+  margin-top: 3.8rem;
+  cursor: pointer;
+}
+.play > p {
+  font-size: .9rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.description {
+  width: 76%;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: 60px;
+  padding: 0px 14px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: white;
+}

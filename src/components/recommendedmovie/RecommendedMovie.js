@@ -1,19 +1,18 @@
-import React from 'react'
 import PrimaryButton from '../primarybutton/PrimaryButton'
-import './recommendedmovie.css'
+import style from './recommendedmovie.module.css'
 
 const RecommendedMovie = ({ movieCover, movieTitle }) => {
   return (
-    <div className="recommended__container">
-      <figure className="recommended__figure">
+    <div className={style.container}>
+      <figure className={style.figure}>
         <img src={ movieCover } loading="lazy" alt={ movieCover } />
       </figure>
-      <div className="recommended__title">
-        <h3 className="recommended__description">{ movieTitle }</h3>
+      <div className={style.title}>
+        <h3 className={style.description}>{ movieTitle }</h3>
           <PrimaryButton
-              className={ "recommended__play" }
+              className={style.play}
           >
-            <p>Ver</p>
+            <p>Ver Ahora</p>
           </PrimaryButton>
       </div>
     </div>
