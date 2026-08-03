@@ -7,7 +7,7 @@ export const useFilms = () => {
   useEffect(() => {
     setLoading(true)
     async function fetchData() {
-      const response = await fetch('https://ghibli-api.up.railway.app/films')
+      const response = await fetch('https://ghibliapi.vercel.app/films')
       const data = await response.json()
       setFilms(data)
       setLoading(false)

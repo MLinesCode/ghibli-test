@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom'
 import LoginGhibli from '../../assets/logo-ghibli.png'
 import Input from '../../components/input/Input'
 import PrimaryButton from '../../components/primarybutton/PrimaryButton'
@@ -7,9 +8,10 @@ import LoginGoogle from '../../assets/icons/google.svg'
 import LoginImage from '../../assets/icon-login.png'
 import styles from './login.module.css'
 
-const LoginScreen = ({ history }) => {
+const LoginScreen = () => {
+  const navigate = useNavigate()
   const handleLogin = () => {
-    history.replace('/')
+    navigate('/', { replace: true })
   }
 
   return (

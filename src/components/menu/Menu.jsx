@@ -1,4 +1,3 @@
-import React from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import IconFull from '../iconfull/IconFull'
 import IconFavorite from '../../assets/icons/heart.png'
@@ -9,10 +8,9 @@ import './menu.css'
 const Menu = () => {
   return (
     <div className="menu__container">
-      <NavLink 
-          activeClassName="active"
-          className="menu__link"
-          exact
+      <NavLink
+          end
+          className={({ isActive }) => isActive ? "menu__link active" : "menu__link"}
           to='/favorites'
       >
         <IconFull icon={ IconFavorite } iconText="Favoritos" />
@@ -24,9 +22,8 @@ const Menu = () => {
         <IconFull icon={ IconHome } iconText="Inicio" />
       </Link>
       <NavLink
-        activeClassName="active"
-        className=""
-        exact
+        end
+        className={({ isActive }) => isActive ? "active" : ""}
         to='/search'
       >
         <IconFull icon={ IconSearch } iconText="Buscar" />

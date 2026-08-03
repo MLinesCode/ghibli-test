@@ -10,10 +10,9 @@ const Header = () => {
     <header className="header__container">
       <div className="header__icons">
         <NavLink
-          activeClassName="active"
-          className="header__link"
-          exact
-          to="./profile"
+          end
+          className={({ isActive }) => isActive ? "header__link active" : "header__link"}
+          to="/profile"
         >
           <IconLite iconSource={AvatarUser} />
         </NavLink>

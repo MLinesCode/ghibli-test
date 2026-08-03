@@ -1,12 +1,13 @@
-import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import LoginGhibli from '../../assets/logo-ghibli.png'
 import Input from '../../components/input/Input'
 import PrimaryButton from '../../components/primarybutton/PrimaryButton'
 import styles from './singup.module.css'
 
-const SingUpScreen = ({ history }) => {
+const SingUpScreen = () => {
+  const navigate = useNavigate()
   const handleSingup = () => {
-    history.replace('/')
+    navigate('/', { replace: true })
   }
 
   return (
@@ -21,14 +22,14 @@ const SingUpScreen = ({ history }) => {
           </div>
           <section className={styles.content}>
             <div className={styles.text}>
-              <label for="name"></label>
+              <label htmlFor="name"></label>
               <Input
                 size='30'
                 placeholder={'Nombre Apellido'}
               />
             </div>
             <div className={styles.text}>
-              <label for="email"></label>
+              <label htmlFor="email"></label>
               <Input
                 type='email'
                 size='30'

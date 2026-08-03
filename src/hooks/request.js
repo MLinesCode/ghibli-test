@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const url = axios.create({
-  baseURL: 'https://ghibliapi.herokuapp.com',
+  baseURL: 'https://ghibliapi.vercel.app',
 });
 
 // se utilizo axios para la peticion se necesita cambiar la estrutura de la api
