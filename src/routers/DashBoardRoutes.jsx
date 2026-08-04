@@ -11,7 +11,7 @@ const DashBoardRoutes = () => {
       <Routes>
         <Route path='home' element={<HomeScreen />} />
         <Route path='favorites' element={<FavoritesScreen />} />
-        <Route path="movie" element={<MovieInfo />} />
+        <Route path="movie/:id" element={<MovieInfo />} />
         <Route path="search" element={<SearchScreen />} />
         <Route path="profile" element={<Profile />} />
         <Route path='*' element={<Navigate to='/home' replace />} />

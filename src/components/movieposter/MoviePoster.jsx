@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
 import './movieposter.css';
 
-const MoviePoster = ({ title, image }) => {
+const MoviePoster = ({ id, title, image }) => {
   return (
     <div className="movie__container">
       <Link
-        to="/movie"
+        to={`/movie/${id}`}
       >
         <figure className="movie__figure">
           <img className="movie__image" src={image} loading="lazy" alt={title} />
