@@ -1,9 +1,15 @@
 import { NavLink } from "react-router-dom";
 import IconLite from "../components/iconlite/IconLite";
-import IconClock from "../assets/icons/clock.png";
 import AvatarUser from "../assets/avatar.png";
 import LogoGhibli from "../assets/logo-ghibli.png";
 import "./header.css";
+
+const getGreeting = () => {
+  const hour = new Date().getHours();
+  if (hour < 12) return "Buenos días";
+  if (hour < 19) return "Buenas tardes";
+  return "Buenas noches";
+};
 
 const Header = () => {
   return (
@@ -16,7 +22,7 @@ const Header = () => {
         >
           <IconLite iconSource={AvatarUser} />
         </NavLink>
-        <IconLite iconSource={IconClock} />
+        <span className="header__greeting">{getGreeting()}</span>
       </div>
       <figure className="header__logo">
         <img src={LogoGhibli} alt={LogoGhibli} />

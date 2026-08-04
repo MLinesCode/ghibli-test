@@ -1,5 +1,24 @@
 .home__container {
   padding-top: 5.2rem;
+  padding-bottom: 5rem;
   position: relative;
   min-height: calc(100vh - 70px);
+}
+
+.home__hero-skeleton {
+  height: 300px;
+  width: 100%;
+  margin-bottom: 2rem;
+  background: var(--skeleton-color);
+  animation: home-hero-shimmer var(--skeleton-animation);
+}
+
+@keyframes home-hero-shimmer {
+  0% {
+    background-position: -100px;
+  }
+  40%,
+  100% {
+    background-position: 270px;
+  }
 }
