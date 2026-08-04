@@ -30,9 +30,10 @@ const HomeScreen = () => {
     );
   }
 
-  const byScoreDesc = [...films].sort((a, b) => Number(b.rt_score) - Number(a.rt_score));
-  const featuredFilm = byScoreDesc[0];
+  const dayIndex = Math.floor(Date.now() / 86400000) % films.length;
+  const featuredFilm = films[dayIndex];
 
+  const byScoreDesc = [...films].sort((a, b) => Number(b.rt_score) - Number(a.rt_score));
   const myListFilms = films.filter((f) => favoriteIds.includes(f.id));
   const miyazakiFilms = films.filter((f) => f.director === MIYAZAKI);
   const topRatedFilms = byScoreDesc.filter((f) => f.id !== featuredFilm?.id).slice(0, TOP_RATED_COUNT);

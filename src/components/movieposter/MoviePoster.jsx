@@ -5,16 +5,16 @@ const MoviePoster = ({ id, title, image, rt_score }) => {
   const score = Number(rt_score)
 
   return (
-    <div className="movie__container">
+    <div className="movieposter__container">
       <Link
         to={`/movie/${id}`}
       >
-        <figure className="movie__figure">
-          <img className="movie__image" src={image} loading="lazy" alt={title} />
-          {!Number.isNaN(score) && <span className="movie__score-badge">★ {score}</span>}
+        <figure className="movieposter__figure">
+          <img className="movieposter__image" src={image} loading="lazy" alt={title} />
+          {!Number.isNaN(score) && <span className="movieposter__score-badge">★ {score}</span>}
         </figure>
       </Link>
-      <p className="movie__title">{title}</p>
+      <p className="movieposter__title">{title}</p>
     </div>
   )
 }

@@ -22,10 +22,15 @@
 
 .scrim {
   position: absolute;
-  inset: 0;
+  /* overhangs the container by 2px on every edge (clipped by .container's
+     overflow:hidden) so the gradient's opaque bottom edge always fully
+     covers the photo, even with the Ken Burns transform on a separate
+     compositor layer causing a sub-pixel seam at inset:0 */
+  inset: -2px;
   background: linear-gradient(
     0deg,
     hsla(60, 100%, 98%, 1) 0%,
+    hsla(60, 100%, 98%, 1) 2px,
     rgba(20, 16, 12, 0.1) 32%,
     rgba(20, 16, 12, 0.05) 55%,
     rgba(20, 16, 12, 0.3) 100%

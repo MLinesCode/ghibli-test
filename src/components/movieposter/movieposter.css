@@ -1,11 +1,11 @@
-.movie__container {
+.movieposter__container {
   margin: 0.4rem 0;
   width: 8.4rem;
   padding: 0px 6px;
   flex-shrink: 0;
 }
 
-.movie__figure {
+.movieposter__figure {
   position: relative;
   margin: auto;
   width: 7.2rem;
@@ -15,19 +15,19 @@
   transition: transform 350ms;
   box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.2);
 }
-.movie__figure:hover {
+.movieposter__figure:hover {
   transform: scale(1.06);
   opacity: 1;
 }
 
-.movie__image {
+.movieposter__image {
   height: 100%;
   width: 100%;
   overflow: hidden;
   object-fit: cover;
 }
 
-.movie__score-badge {
+.movieposter__score-badge {
   position: absolute;
   top: 6px;
   right: 6px;
@@ -42,7 +42,7 @@
   letter-spacing: 0.02em;
 }
 
-.movie__title {
+.movieposter__title {
   margin: 8px 2px 0;
   font-size: 0.8rem;
   font-weight: 500;
