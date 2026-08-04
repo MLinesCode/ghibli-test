@@ -1,63 +1,109 @@
 .container {
-  height: 340px;
+  position: relative;
+  height: 300px;
   width: 100%;
   overflow: hidden;
-  margin-bottom: 1.6rem;
+  margin-bottom: 2rem;
   z-index: 1;
+  background: #2b2620;
 }
 
 .figure {
-  height: inherit;
-  width: inherit;
+  height: 100%;
+  width: 100%;
 }
 
-.figure img {
+.image {
   height: 100%;
   width: 100%;
   object-fit: cover;
+  animation: kenBurns 24s ease-in-out infinite alternate;
+}
+
+.scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    0deg,
+    hsla(60, 100%, 98%, 1) 0%,
+    rgba(20, 16, 12, 0.1) 32%,
+    rgba(20, 16, 12, 0.05) 55%,
+    rgba(20, 16, 12, 0.3) 100%
+  );
+}
+
+.eyebrow {
+  position: absolute;
+  top: 1rem;
+  left: 1.1rem;
+  z-index: 2;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: rgba(20, 16, 12, 0.4);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  color: white;
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
 }
 
 .title {
   position: absolute;
+  z-index: 2;
   display: flex;
-  justify-content: left;
-  align-items: center;
-  height: 128px;
+  flex-direction: column;
+  align-items: flex-start;
   width: 100%;
-  padding: 0 .6rem;
-  top: 18.5rem;
+  padding: 0 1.1rem 1.1rem;
+  bottom: 0;
   left: 0;
-  background: linear-gradient(
-    0deg,
-    #222222 10%,
-    #1f1f1fa6 55%,
-    #50505000 80%,
-    transparent 100%
-  );
-}
-
-.play {
-  height: 35px;
-  padding: 0 .5rem;
-  width: 105px;
-  margin: 0 10px;
-  margin-top: 3.8rem;
-  cursor: pointer;
-}
-.play > p {
-  font-size: .9rem;
-  font-weight: 400;
-  letter-spacing: 1px;
 }
 
 .description {
-  width: 76%;
-  font-size: 1rem;
+  width: 90%;
+  font-family: var(--title-font);
+  font-size: 1.35rem;
   font-weight: 700;
-  margin-top: 60px;
-  padding: 0px 14px;
+  line-height: 1.2;
   overflow: hidden;
-  white-space: nowrap;
   text-overflow: ellipsis;
-  color: white;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  color: #2b2620;
+  text-shadow: 0 1px 12px rgba(255, 252, 240, 0.6);
+}
+
+.meta {
+  margin-top: 0.3rem;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: #6b6259;
+}
+
+.play {
+  height: auto;
+  padding: 0.55rem 1.3rem;
+  width: fit-content;
+  margin: 0.9rem 0 0;
+  border-radius: 999px;
+  cursor: pointer;
+  box-shadow: 0 8px 16px rgba(227, 102, 15, 0.3);
+}
+
+.play > p {
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+@keyframes kenBurns {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
 }

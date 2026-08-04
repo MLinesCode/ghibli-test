@@ -125,7 +125,7 @@
 .movie__favorite-icon {
   height: 18px;
   width: 18px;
-  filter: brightness(0) invert(1);
+  color: white;
   transition: transform 300ms;
 }
 

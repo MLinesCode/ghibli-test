@@ -1,10 +1,11 @@
 import { useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { useFilm } from '../../hooks/useFilm'
+import { useFavorites } from '../../hooks/useFavorites'
 import { TRAILERS } from '../../data/trailers'
+import { HeartIcon } from '../icons/NavIcons'
 import IconLite from '../iconlite/IconLite'
 import ArrowLeft from '../../assets/icons/left-arrow.svg'
-import HeartIcon from '../../assets/icons/heart.png'
 import ClockIcon from '../../assets/icons/clock.png'
 import './movieinfo.css'
 
@@ -66,7 +67,7 @@ const MovieInfo = () => {
   const { id } = useParams()
   const navigate = useNavigate()
   const { film, isLoading } = useFilm(id)
-  const [isFavorite, setIsFavorite] = useState(false)
+  const { isFavorite, toggleFavorite } = useFavorites()
   const [showTrailer, setShowTrailer] = useState(false)
 
   if (isLoading || !film) {
@@ -141,11 +142,11 @@ const MovieInfo = () => {
               <IconLite iconSource={ArrowLeft} />
             </button>
             <button
-              className={`movie__glass-btn movie__favorite ${isFavorite ? 'is-active' : ''}`}
-              onClick={() => setIsFavorite((f) => !f)}
-              aria-label={isFavorite ? 'Quitar de favoritos' : 'Agregar a favoritos'}
+              className={`movie__glass-btn movie__favorite ${isFavorite(id) ? 'is-active' : ''}`}
+              onClick={() => toggleFavorite(id)}
+              aria-label={isFavorite(id) ? 'Quitar de favoritos' : 'Agregar a favoritos'}
             >
-              <img src={HeartIcon} alt="" className="movie__favorite-icon" />
+              <HeartIcon filled={isFavorite(id)} className="movie__favorite-icon" />
             </button>
           </div>
         </div>
