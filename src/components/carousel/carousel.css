@@ -1,12 +1,38 @@
 .carousel__container {
-  margin: 0.4rem 0.6rem;
+  margin: 1.6rem 0.6rem;
 }
 
 .carousel__category {
-  font-size: 1.3rem;
-  font-weight: 600;
-  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--title-font);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #2b2620;
   position: relative;
+  margin-bottom: 0.9rem;
+}
+
+.carousel__category-icon {
+  display: flex;
+  height: 20px;
+  width: 20px;
+  color: hsla(25, 93%, 48%, 1);
+  flex-shrink: 0;
+}
+
+.carousel__category-icon svg {
+  height: 100%;
+  width: 100%;
+}
+
+.carousel__empty {
+  font-size: 0.88rem;
+  font-style: italic;
+  color: #a39b96;
+  padding: 0.4rem 0.2rem 0.2rem;
 }
 
 .carousel__items {

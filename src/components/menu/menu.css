@@ -1,11 +1,11 @@
 .menu__container {
-  position: sticky;
-  position: -webkit-sticky;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
   display: flex;
   width: 100%;
-  height: 64px;
-  top: 2rem;
-  bottom: 0;
+  height: 66px;
   align-items: center;
   justify-content: space-around;
   z-index: 10;
@@ -13,6 +13,28 @@
   box-shadow: 0px -4px 13px -9px rgb(150, 150, 150);
 }
 
-.menu__container a {
+.menu__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
   text-decoration: none;
+  color: #a39b96;
+  font-size: 0.68rem;
+  font-weight: 500;
+  transition: color 200ms;
+}
+
+.menu__icon {
+  height: 22px;
+  width: 22px;
+  transition: transform 250ms;
+}
+
+.menu__link.active {
+  color: hsla(25, 93%, 42%, 1);
+}
+
+.menu__link.active .menu__icon {
+  transform: translateY(-1px) scale(1.08);
 }

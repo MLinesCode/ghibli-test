@@ -1,34 +1,39 @@
-import { Link, NavLink } from 'react-router-dom'
-import IconFull from '../iconfull/IconFull'
-import IconFavorite from '../../assets/icons/heart.png'
-import IconHome from '../../assets/icons/home.png'
-import IconSearch from '../../assets/icons/search.png'
+import { NavLink } from 'react-router-dom'
+import { HeartIcon, HomeIcon, SearchIcon } from '../icons/NavIcons'
 import './menu.css'
 
 const Menu = () => {
   return (
-    <div className="menu__container">
-      <NavLink
-          end
-          className={({ isActive }) => isActive ? "menu__link active" : "menu__link"}
-          to='/favorites'
-      >
-        <IconFull icon={ IconFavorite } iconText="Favoritos" />
-      </NavLink>
-      <Link
-        className=""
-        to='/'
-      >
-        <IconFull icon={ IconHome } iconText="Inicio" />
-      </Link>
+    <nav className="menu__container">
       <NavLink
         end
-        className={({ isActive }) => isActive ? "active" : ""}
-        to='/search'
+        className={({ isActive }) => `menu__link ${isActive ? 'active' : ''}`}
+        to="/favorites"
       >
-        <IconFull icon={ IconSearch } iconText="Buscar" />
+        {({ isActive }) => (
+          <>
+            <HeartIcon filled={isActive} className="menu__icon" />
+            <span>Favoritos</span>
+          </>
+        )}
       </NavLink>
-    </div>
+      <NavLink
+        end
+        className={({ isActive }) => `menu__link ${isActive ? 'active' : ''}`}
+        to="/home"
+      >
+        <HomeIcon className="menu__icon" />
+        <span>Inicio</span>
+      </NavLink>
+      <NavLink
+        end
+        className={({ isActive }) => `menu__link ${isActive ? 'active' : ''}`}
+        to="/search"
+      >
+        <SearchIcon className="menu__icon" />
+        <span>Buscar</span>
+      </NavLink>
+    </nav>
   )
 }
 
