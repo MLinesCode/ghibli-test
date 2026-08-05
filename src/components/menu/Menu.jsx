@@ -1,10 +1,22 @@
-import { NavLink } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
 import { HeartIcon, HomeIcon, SearchIcon } from '../icons/NavIcons'
 import './menu.css'
 
+const ROUTES = ['/favorites', '/home', '/search']
+
 const Menu = () => {
+  const { pathname } = useLocation()
+  const matchedIndex = ROUTES.indexOf(pathname)
+  const activeIndex = matchedIndex === -1 ? 1 : matchedIndex
+
   return (
     <nav className="menu__container">
+      <span
+        className="menu__indicator"
+        style={{ transform: `translateX(${activeIndex * 100}%)` }}
+      >
+        <span className="menu__indicator-bar" />
+      </span>
       <NavLink
         end
         className={({ isActive }) => `menu__link ${isActive ? 'active' : ''}`}
