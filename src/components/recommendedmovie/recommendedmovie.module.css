@@ -1,6 +1,8 @@
 .container {
   position: relative;
-  height: 300px;
+  height: 58vh;
+  min-height: 400px;
+  max-height: 540px;
   width: 100%;
   overflow: hidden;
   margin-bottom: 2rem;
@@ -9,15 +11,23 @@
 }
 
 .figure {
+  position: relative;
   height: 100%;
   width: 100%;
+  overflow: hidden;
 }
 
 .image {
-  height: 100%;
-  width: 100%;
+  position: absolute;
+  top: -4%;
+  left: -4%;
+  height: 108%;
+  width: 108%;
   object-fit: cover;
-  animation: kenBurns 24s ease-in-out infinite alternate;
+  animation: kenBurns 32s ease-in-out infinite alternate;
+  transform: translateZ(0);
+  will-change: transform;
+  backface-visibility: hidden;
 }
 
 .scrim {
@@ -27,31 +37,65 @@
      covers the photo, even with the Ken Burns transform on a separate
      compositor layer causing a sub-pixel seam at inset:0 */
   inset: -2px;
+  /* Strong, reliable darkening across the whole zone the title/meta/CTA sit
+     in (roughly the bottom 45%) so white text stays readable no matter how
+     bright or busy the underlying photo is — not just a thin edge fade. */
   background: linear-gradient(
     0deg,
     hsla(60, 100%, 98%, 1) 0%,
     hsla(60, 100%, 98%, 1) 2px,
-    rgba(20, 16, 12, 0.1) 32%,
-    rgba(20, 16, 12, 0.05) 55%,
-    rgba(20, 16, 12, 0.3) 100%
+    rgba(15, 12, 9, 0.88) 6%,
+    rgba(15, 12, 9, 0.75) 26%,
+    rgba(15, 12, 9, 0.48) 45%,
+    rgba(15, 12, 9, 0.15) 66%,
+    rgba(15, 12, 9, 0) 85%
   );
 }
 
 .eyebrow {
   position: absolute;
-  top: 1rem;
+  top: 1.1rem;
   left: 1.1rem;
   z-index: 2;
-  padding: 4px 12px;
+  padding: 5px 13px;
   border-radius: 999px;
   background: rgba(20, 16, 12, 0.4);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   color: white;
-  font-size: 0.68rem;
+  font-size: 0.7rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.06em;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: 0.55rem;
+}
+
+.ratingStars {
+  display: flex;
+  gap: 2px;
+}
+
+.ratingStar {
+  height: 15px;
+  width: 15px;
+  color: #ffb066;
+}
+
+.ratingStar.isEmpty {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.ratingLabel {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.92);
+  white-space: nowrap;
 }
 
 .title {
@@ -61,54 +105,60 @@
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
-  padding: 0 1.1rem 1.1rem;
+  padding: 0 1.1rem 1.4rem;
   bottom: 0;
   left: 0;
 }
 
 .description {
-  width: 90%;
+  width: 92%;
   font-family: var(--title-font);
-  font-size: 1.35rem;
+  font-size: 1.85rem;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.15;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-  color: #2b2620;
-  text-shadow: 0 1px 12px rgba(255, 252, 240, 0.6);
+  color: white;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
 }
 
 .meta {
-  margin-top: 0.3rem;
-  font-size: 0.82rem;
+  margin-top: 0.4rem;
+  font-size: 0.9rem;
   font-weight: 500;
-  color: #6b6259;
+  color: rgba(255, 255, 255, 0.85);
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
 }
 
 .play {
   height: auto;
-  padding: 0.55rem 1.3rem;
+  padding: 0.75rem 1.6rem;
   width: fit-content;
-  margin: 0.9rem 0 0;
+  margin: 1.1rem 0 0;
   border-radius: 999px;
   cursor: pointer;
-  box-shadow: 0 8px 16px rgba(227, 102, 15, 0.3);
+  box-shadow: 0 10px 20px rgba(227, 102, 15, 0.32);
+  transition: transform 200ms, box-shadow 200ms;
+}
+
+.play:active {
+  transform: scale(0.96);
 }
 
 .play > p {
-  font-size: 0.88rem;
+  font-size: 0.98rem;
   font-weight: 600;
   letter-spacing: 0.3px;
 }
 
 @keyframes kenBurns {
   from {
-    transform: scale(1);
+    transform: translateZ(0) scale(1);
   }
   to {
-    transform: scale(1.1);
+    transform: translateZ(0) scale(1.06);
   }
 }

@@ -20,20 +20,30 @@
 
 .movie__hero-image {
   position: absolute;
-  inset: 0;
+  /* oversized + offset so the animated zoom never brings the layer's own
+     edge close to the visible boundary (avoids a sub-pixel seam/jitter
+     during the transform animation, worst on lower-powered mobile GPUs) */
+  top: -4%;
+  left: -4%;
+  height: 108%;
+  width: 108%;
   background-size: cover;
   background-position: center;
-  animation: kenBurns 22s ease-in-out infinite alternate;
+  animation: kenBurns 32s ease-in-out infinite alternate;
+  transform: translateZ(0);
+  will-change: transform;
+  backface-visibility: hidden;
 }
 
 .movie__hero-scrim {
   position: absolute;
-  inset: 0;
+  inset: -2px;
   background: linear-gradient(
     180deg,
     rgba(20, 16, 12, 0.35) 0%,
     rgba(20, 16, 12, 0) 30%,
     rgba(20, 16, 12, 0.15) 60%,
+    hsla(60, 100%, 98%, 1) 98%,
     hsla(60, 100%, 98%, 1) 100%
   );
 }
@@ -546,10 +556,10 @@
 
 @keyframes kenBurns {
   from {
-    transform: scale(1);
+    transform: translateZ(0) scale(1);
   }
   to {
-    transform: scale(1.12);
+    transform: translateZ(0) scale(1.08);
   }
 }
 
