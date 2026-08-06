@@ -108,6 +108,7 @@
   justify-content: center;
   height: 44px;
   width: 44px;
+  margin: 0;
   border: none;
   border-radius: 50%;
   background: rgba(20, 16, 12, 0.35);
@@ -120,6 +121,12 @@
 .movie__glass-btn:hover {
   background: rgba(20, 16, 12, 0.5);
   transform: scale(1.05);
+}
+
+.movie__glass-btn:focus-visible,
+.movie__trailer-btn:focus-visible {
+  outline: 3px solid #ffb066;
+  outline-offset: 3px;
 }
 
 .movie__glass-btn .iconlite__container {
@@ -195,7 +202,6 @@
   position: relative;
   z-index: 2;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 76px;
@@ -209,11 +215,11 @@
 }
 
 .movie__seal-caption {
-  font-size: 0.62rem;
+  font-size: 0.66rem;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
-  font-weight: 600;
-  color: #a3814f;
+  letter-spacing: 0.075em;
+  font-weight: 700;
+  color: #b8500e;
   animation: fadeUp 600ms ease both;
   animation-delay: 220ms;
 }
@@ -228,20 +234,24 @@
 
 .movie__seal-value {
   position: relative;
+  display: inline-flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 1px;
   font-family: var(--title-font);
   font-weight: 700;
-  font-size: 1.45rem;
+  font-size: 1.42rem;
   line-height: 1;
   color: white;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
 }
 
 .movie__seal-percent {
-  position: relative;
-  font-size: 0.68rem;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.9);
-  margin-top: 1px;
+  display: inline-block;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.72em;
+  font-weight: 700;
+  color: inherit;
 }
 
 /* ---------- Content ---------- */
@@ -322,6 +332,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.55rem;
+  margin: 0;
   padding: 0.7rem 1.4rem;
   border: none;
   border-radius: 999px;
@@ -607,5 +618,20 @@
   40%,
   100% {
     background-position: 270px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .movie__main *,
+  .movie__main *::before,
+  .movie__main *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .movie__hero-image {
+    transform: none;
+    will-change: auto;
   }
 }

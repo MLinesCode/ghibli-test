@@ -106,6 +106,7 @@ const MovieInfo = () => {
 
   const heroImage = movie_banner || image
   const score = Number(rt_score)
+  const hasValidScore = Number.isFinite(score) && score >= 0 && score <= 100
   const trailerId = TRAILERS[id]
   const trailerSearchUrl = `https://www.youtube.com/results?search_query=${encodeURIComponent(
     `${title} trailer Studio Ghibli`
@@ -124,6 +125,7 @@ const MovieInfo = () => {
         <div
           className="movie__hero-image"
           style={{ backgroundImage: `url(${heroImage})` }}
+          aria-hidden="true"
         />
         <div className="movie__hero-clouds" aria-hidden="true">
           <Cloud className="cloud cloud--1" />
@@ -136,15 +138,18 @@ const MovieInfo = () => {
           <div className="movie__hero-nav">
             <button
               className="movie__glass-btn"
+              type="button"
               onClick={() => navigate('/home')}
-              aria-label="Volver"
+              aria-label="Volver al inicio"
             >
               <IconLite iconSource={ArrowLeft} />
             </button>
             <button
               className={`movie__glass-btn movie__favorite ${isFavorite(id) ? 'is-active' : ''}`}
+              type="button"
               onClick={() => toggleFavorite(id)}
               aria-label={isFavorite(id) ? 'Quitar de favoritos' : 'Agregar a favoritos'}
+              aria-pressed={isFavorite(id)}
             >
               <HeartIcon filled={isFavorite(id)} className="movie__favorite-icon" />
             </button>
@@ -157,16 +162,23 @@ const MovieInfo = () => {
           <img className="movie__poster-img" src={image} alt={title} loading="lazy" />
         </figure>
 
-        {!Number.isNaN(score) && (
+        {hasValidScore && (
           <div className="movie__seal-wrap">
             <div
               className="movie__seal"
+              role="meter"
+              aria-labelledby="movie-approval-label"
+              aria-valuemin="0"
+              aria-valuemax="100"
+              aria-valuenow={score}
+              aria-valuetext={`${score} por ciento de aprobación`}
               title={`${score}% de aprobación de la crítica en Rotten Tomatoes`}
             >
-              <span className="movie__seal-value">{score}</span>
-              <span className="movie__seal-percent">%</span>
+              <span className="movie__seal-value" aria-hidden="true">
+                {score}<span className="movie__seal-percent">%</span>
+              </span>
             </div>
-            <span className="movie__seal-caption">Aprobación</span>
+            <span id="movie-approval-label" className="movie__seal-caption">Aprobación</span>
           </div>
         )}
       </div>
@@ -200,12 +212,13 @@ const MovieInfo = () => {
                 <iframe
                   src={`https://www.youtube-nocookie.com/embed/${trailerId}?autoplay=1`}
                   title={`Tráiler de ${title}`}
+                  loading="lazy"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 />
               </div>
             ) : (
-              <button className="movie__trailer-btn" onClick={() => setShowTrailer(true)}>
+              <button className="movie__trailer-btn" type="button" onClick={() => setShowTrailer(true)}>
                 <span className="movie__trailer-icon">
                   <PlayIcon />
                 </span>
