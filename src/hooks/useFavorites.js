@@ -1,11 +1,14 @@
-import { useCallback, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 
 const STORAGE_KEY = 'ghibli:favorites'
+const FAVORITES_EVENT = 'ghibli:favorites-change'
 
 const readStoredIds = () => {
   try {
-    const raw = window.localStorage.getItem(STORAGE_KEY)
-    return raw ? JSON.parse(raw) : []
+    const storedValue = JSON.parse(window.localStorage.getItem(STORAGE_KEY) || '[]')
+    return Array.isArray(storedValue)
+      ? [...new Set(storedValue.filter((id) => typeof id === 'string'))]
+      : []
   } catch {
     return []
   }
@@ -14,12 +17,29 @@ const readStoredIds = () => {
 export const useFavorites = () => {
   const [favoriteIds, setFavoriteIds] = useState(readStoredIds)
 
+  useEffect(() => {
+    const syncFavorites = () => setFavoriteIds(readStoredIds())
+    window.addEventListener('storage', syncFavorites)
+    window.addEventListener(FAVORITES_EVENT, syncFavorites)
+    return () => {
+      window.removeEventListener('storage', syncFavorites)
+      window.removeEventListener(FAVORITES_EVENT, syncFavorites)
+    }
+  }, [])
+
   const toggleFavorite = useCallback((id) => {
     setFavoriteIds((current) => {
       const next = current.includes(id)
-        ? current.filter((favId) => favId !== id)
+        ? current.filter((favoriteId) => favoriteId !== id)
         : [...current, id]
-      window.localStorage.setItem(STORAGE_KEY, JSON.stringify(next))
+
+      try {
+        window.localStorage.setItem(STORAGE_KEY, JSON.stringify(next))
+        window.queueMicrotask(() => window.dispatchEvent(new Event(FAVORITES_EVENT)))
+      } catch {
+        // The in-memory state remains usable when storage is unavailable.
+      }
+
       return next
     })
   }, [])
