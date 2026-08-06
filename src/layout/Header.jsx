@@ -19,13 +19,14 @@ const Header = () => {
           end
           className={({ isActive }) => isActive ? "header__link active" : "header__link"}
           to="/profile"
+          aria-label="Abrir perfil"
         >
           <IconLite iconSource={AvatarUser} />
         </NavLink>
         <span className="header__greeting">{getGreeting()}</span>
       </div>
       <figure className="header__logo">
-        <img src={LogoGhibli} alt={LogoGhibli} />
+        <img src={LogoGhibli} alt="Studio Ghibli" />
       </figure>
     </header>
   );

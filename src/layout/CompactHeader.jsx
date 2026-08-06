@@ -4,7 +4,7 @@ import LogoGhibli from '../assets/logo.png'
 import AvatarUser from '../assets/avatar.png'
 import './compact-header.css'
 
-const CompactHeader = () => {
+const CompactHeader = ({ showProfile = true }) => {
   const navigate = useNavigate()
 
   return (
@@ -22,9 +22,11 @@ const CompactHeader = () => {
         <img src={LogoGhibli} alt="Studio Ghibli" />
       </Link>
 
-      <Link className="compact-header__control" to="/profile" aria-label="Ir al perfil">
-        <img className="compact-header__avatar" src={AvatarUser} alt="" />
-      </Link>
+      {showProfile && (
+        <Link className="compact-header__control" to="/profile" aria-label="Ir al perfil">
+          <img className="compact-header__avatar" src={AvatarUser} alt="" />
+        </Link>
+      )}
     </header>
   )
 }
