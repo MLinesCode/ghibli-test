@@ -5,6 +5,7 @@ import LogoGhibli from '../../assets/logo.png'
 import AvatarUser from '../../assets/avatar.png'
 import Totoro from '../../assets/totoro.png'
 import InputSuggest from '../../components/inputsuggest/InputSuggest'
+import Menu from '../../components/menu/Menu'
 import { getApiSuggestions } from '../../hooks/request'
 import './searchscreen.css'
 
@@ -54,6 +55,7 @@ const SearchScreen = () => {
       <div className="search__image">
         <img src={ Totoro } loading="lazy" alt={ Totoro } />
       </div>
+      <Menu />
     </>
   )
 }
