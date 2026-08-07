@@ -1,5 +1,7 @@
 .carousel__container {
   margin: 1.6rem 0.6rem;
+  content-visibility: auto;
+  contain-intrinsic-size: auto 240px;
 }
 
 .carousel__category {

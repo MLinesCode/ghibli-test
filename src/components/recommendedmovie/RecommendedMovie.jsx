@@ -27,7 +27,14 @@ const RecommendedMovie = ({ film }) => {
     <div className={style.container}>
       <span className={style.eyebrow}>Recomendada para ti</span>
       <figure className={style.figure}>
-        <img className={style.image} src={cover} loading="lazy" alt={title} />
+        <img
+          className={style.image}
+          src={cover}
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
+          alt={title}
+        />
       </figure>
       <div className={style.scrim} />
       <div className={style.title}>

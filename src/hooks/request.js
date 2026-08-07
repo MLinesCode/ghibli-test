@@ -1,15 +1,12 @@
-import axios from 'axios'
-
-const api = axios.create({
-  baseURL: 'https://ghi.lonepixell.com'
-})
-
 let filmsRequest
 
 const getFilms = async () => {
   if (!filmsRequest) {
-    filmsRequest = api.get('/films')
-      .then((response) => response.data)
+    filmsRequest = fetch('https://ghi.lonepixell.com/films')
+      .then((response) => {
+        if (!response.ok) throw new Error(`HTTP ${response.status}`)
+        return response.json()
+      })
       .catch((error) => {
         filmsRequest = undefined
         throw error

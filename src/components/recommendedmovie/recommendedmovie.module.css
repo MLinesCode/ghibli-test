@@ -8,6 +8,7 @@
   margin-bottom: 2rem;
   z-index: 1;
   background: #2b2620;
+  contain: paint;
 }
 
 .figure {

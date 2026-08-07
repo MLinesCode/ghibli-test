@@ -10,7 +10,7 @@ const MoviePoster = ({ id, title, image, rt_score }) => {
         to={`/movie/${id}`}
       >
         <figure className="movieposter__figure">
-          <img className="movieposter__image" src={image} loading="lazy" alt={title} />
+          <img className="movieposter__image" src={image} loading="lazy" decoding="async" alt={title} />
           {!Number.isNaN(score) && <span className="movieposter__score-badge">★ {score}</span>}
         </figure>
       </Link>

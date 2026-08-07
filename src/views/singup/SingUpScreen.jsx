@@ -16,8 +16,9 @@ const SingUpScreen = () => {
         <div className={styles.container}>
           <div className={styles.image}>
             <img src={LoginGhibli}
-              loading="lazy"
-              alt={LoginGhibli} />
+              loading="eager"
+              decoding="async"
+              alt="Studio Ghibli" />
             <h2>Crea tu cuenta</h2>
           </div>
           <section className={styles.content}>

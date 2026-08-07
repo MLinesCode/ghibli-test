@@ -20,13 +20,15 @@ const LoginScreen = () => {
         <div className={styles.container}>
           <div className={styles.image}>
             <img src={LoginGhibli}
-              loading="lazy"
-              alt={LoginGhibli}
+              loading="eager"
+              decoding="async"
+              alt="Studio Ghibli"
             />
             <img src={LoginImage}
               className={styles.imglogin}
-              loading="lazy"
-              alt={LoginImage} />
+              loading="eager"
+              decoding="async"
+              alt="" />
           </div>
           <div className={styles.input}>
             <Input

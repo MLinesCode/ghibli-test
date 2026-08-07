@@ -1,9 +1,11 @@
+import { lazy } from 'react'
 import { Navigate, Route, Routes } from 'react-router-dom'
-import HomeScreen from '../views/home/HomeScreen'
-import FavoritesScreen from '../views/favorites/FavoritesScreen'
-import MovieInfo from '../components/movieinfo/MovieInfo'
-import SearchScreen from '../views/search/SearchScreen'
-import Profile from '../views/profile/Profile'
+
+const HomeScreen = lazy(() => import('../views/home/HomeScreen'))
+const FavoritesScreen = lazy(() => import('../views/favorites/FavoritesScreen'))
+const MovieInfo = lazy(() => import('../components/movieinfo/MovieInfo'))
+const SearchScreen = lazy(() => import('../views/search/SearchScreen'))
+const Profile = lazy(() => import('../views/profile/Profile'))
 
 const DashBoardRoutes = () => {
   return (

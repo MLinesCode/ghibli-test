@@ -16,6 +16,7 @@
   width: 100%;
   overflow: hidden;
   background: #2b2620;
+  contain: paint;
 }
 
 .movie__hero-image {

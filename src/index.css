@@ -13,3 +13,8 @@ body {
   background-color: hsla(60, 100%, 98%, 1);
   font-family: 'Poppins', sans-serif;
 }
+
+.route-loading {
+  min-height: 100vh;
+  background: hsla(60, 100%, 98%, 1);
+}
